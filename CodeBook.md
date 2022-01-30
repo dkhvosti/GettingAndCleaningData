@@ -1,9 +1,22 @@
+**Introduction**
+
 This is the codebook for the course project on Getting and Cleaning Data using R.
+
+**Dataset**
 
 The data represent data collected from the accelerometers from the Samsung Galaxy S smartphone in a study of 30 participants. 
 Description of the original data is available here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 Data are contained in a zip archive https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+
+**Script description**
+
+Input: zip archive getdata_projectfiles_UCI HAR Dataset.zip, must be in the working directory
+Output: text file mean_values_by_activity_and_participant.txt
+
+
+**Details**
 
 The script does the following (assuming that the zip file has already been downloaded into working directory):
 
@@ -19,16 +32,22 @@ The script does the following (assuming that the zip file has already been downl
     Activity labels
     UCI HAR Dataset/activity_labels.txt
    
-   3.Tidies the feature names to remove "-", parentheses, commas
+   3. Tidies the feature names to remove "-", parentheses, commas
 
    4. Extracts only the features on the mean and standard deviation for each measurement. I.e., features that contain the "mean" and "std" in feature name
 
    5. Tidies up the dataset (reorders columns)
 
    6. Uses descriptive activity names to name the activities in the data set
+   
+   7. Records resultant dataset in df_pruned data frame
 
-   7. From the data set in step 6, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+   7. From the data set in step 6, creates a second, independent tidy data set mean_data with the average of each variable for each activity and each subject.
+    
+   9. Writes mean_data into a txt file mean_values_by_activity_and_participant.txt
+   
  
- Libraries used:
+ **Libraries used:**
+ 
  dplyr
  tidyr
